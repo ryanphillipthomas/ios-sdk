@@ -107,7 +107,7 @@
 * @param application The singleton app object
  * @param notification UILocalNotification object supplied by the source app.
 */
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification;
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UNNotificationRequest *)notification;
 
 /*!
  * Override System's userNotificationCenter method to Operate PushNotification
@@ -117,7 +117,7 @@
  */
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
 didReceiveNotificationResponse:(UNNotificationResponse *)response
-         withCompletionHandler:(void(^)())completionHandler;
+         withCompletionHandler:(void(^)(void))completionHandler;
 /*!
  * Set security Signature for Authentication
  * @param token - The Security Token recived from client server
